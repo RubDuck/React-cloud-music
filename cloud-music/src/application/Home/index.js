@@ -1,6 +1,6 @@
-import React from 'react';
+import React , { useState } from 'react';
 import { renderRoutes } from 'react-router-config';
-import { Top, Tab, TabItem } from './style';
+import { Top, Tab, TabItem, FixPosition, FixOne } from './style';
 import { NavLink } from 'react-router-dom';
 
 const routeLink = [
@@ -12,7 +12,7 @@ const routeLink = [
 function Home (props) {
   const { route } = props;
   return(
-    <div>
+    <FixPosition>
       <Top>
         <span className='iconfont menu'>&#xe6ae;</span>
         <span className="title">WebApp</span>
@@ -27,8 +27,10 @@ function Home (props) {
           </NavLink>
         )}
       </Tab>
-      { renderRoutes(route.routes) }
-    </div>
+      <FixOne>
+        { renderRoutes(route.routes) }
+      </FixOne>
+    </FixPosition>
   )
 }
 

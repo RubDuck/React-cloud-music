@@ -43,3 +43,13 @@ export const TabItem = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+export const FixPosition = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`
+export const FixOne = styled.div`
+  flex: 1;
+  overflow: hidden;
+`
